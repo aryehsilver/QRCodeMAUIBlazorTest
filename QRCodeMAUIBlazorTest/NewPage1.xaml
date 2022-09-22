@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI"
+             x:Class="QRCodeMAUIBlazorTest.NewPage1"
+             Title="NewPage1">
+  <VerticalStackLayout>
+    <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView"
+                                   IsDetecting="True"
+                                   IsTorchOn="False"
+                                   BarcodesDetected="BarcodesDetected" />
+  </VerticalStackLayout>
+</ContentPage>

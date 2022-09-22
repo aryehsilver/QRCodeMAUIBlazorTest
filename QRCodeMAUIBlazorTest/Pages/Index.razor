@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<button class="btn btn-warning" @onclick="OpenWindow">Scan Now</button>
+
+@code {
+
+  private void OpenWindow() =>
+    App.Current.MainPage.Navigation.PushModalAsync(new NewPage1());
+  
+}
