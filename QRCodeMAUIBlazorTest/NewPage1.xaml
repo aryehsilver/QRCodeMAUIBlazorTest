@@ -9,5 +9,7 @@
                                    IsDetecting="True"
                                    IsTorchOn="False"
                                    BarcodesDetected="BarcodesDetected" />
+    <Button Clicked="ReturnToBlazor_Clicked"
+            Text="Return to Blazor"></Button>
   </VerticalStackLayout>
 </ContentPage>

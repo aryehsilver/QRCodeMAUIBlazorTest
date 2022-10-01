@@ -1,14 +1,18 @@
 ﻿@page "/"
+@using ZXing.Net.Maui
 
-<h1>Hello, world!</h1>
+<div class="text-center">
+  <button class="btn btn-warning" @onclick="OpenWindow">Scan barcodes</button>
+</div>
 
-Welcome to your new app.
-
-<button class="btn btn-warning" @onclick="OpenWindow">Scan Now</button>
+<div class="mt-3">Value of first barcode: @BarcodeResults?.FirstOrDefault().Value</div>
 
 @code {
 
+  [CascadingParameter]
+  public List<BarcodeResult> BarcodeResults { get; set; } = new();
+
   private void OpenWindow() =>
     App.Current.MainPage.Navigation.PushModalAsync(new NewPage1());
-  
+
 }
